@@ -87,6 +87,7 @@ function Signup() {
 />
 
 
+
           <label htmlFor="profileImage">
             <div className="absolute bottom-0 h-1/3 bg-slate-500 w-full text-center cursor-pointer bg-opacity-50">
               <p className="text-sm p-1 text-white">Upload</p>

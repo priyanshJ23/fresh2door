@@ -1,7 +1,8 @@
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
-
+const apikey = process.env.REACT_EMAIL_KEY 
+const dokey = process.env.REACT_EMAIL_PRIVTE_KEY 
 const Contact = () => {
   const {
     register,
@@ -42,7 +43,7 @@ const Contact = () => {
         message,
       };
 
-      await emailjs.send( 'service_0jywe1g',  'template_p6mcfmd', templateParams, 'ISlAgZxhtvyrJx32B').then(
+      await emailjs.send( apikey,  'template_p6mcfmd', templateParams, dokey).then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
         },
