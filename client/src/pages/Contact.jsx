@@ -43,7 +43,7 @@ const Contact = () => {
         message,
       };
 
-      await emailjs.send( apikey,  'template_p6mcfmd', templateParams, dokey).then(
+      await emailjs.send( 'service_0jywe1g', 'template_p6mcfmd', templateParams, 'ISlAgZxhtvyrJx32B').then(
         (response) => {
           console.log('SUCCESS!', response.status, response.text);
         },

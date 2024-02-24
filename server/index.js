@@ -4,8 +4,13 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv").config();
 const axios  = require("axios")
 const app = express();
-app.use(cors());
+
+const corsOptions = {
+    origin: "http://localhost:3000" // frontend URI (ReactJS)
+}
 app.use(express.json({limit: "10mb"}));
+app.use(cors(corsOptions));
+
 
 const PORT = process.env.PORT
 
