@@ -9,15 +9,7 @@ import Footer from "./components/Footer";
 export default function Appo() {
   const dispatch = useDispatch()
   const productData = useSelector((state) => state.product)
-
-  // useEffect(() => {
-  //   (async () => {
-  //     const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/product`)
-  //     const resData = await res.json()
-  //     dispatch(setDataProduct(resData))
-  //   })()
-  // }, [])
-
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
