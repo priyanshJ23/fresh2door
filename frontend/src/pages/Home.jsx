@@ -14,7 +14,7 @@ import Carousel from "./Slick";
 import Testimonial from "../components/Testimonial";
 import data from '../components/data.json';
 import React from 'react';
-import Banner from 'react-js-banner';
+import Banner from "./Banner";
 
 function Home() {
  
@@ -40,8 +40,8 @@ function Home() {
     <div className= "bg-white">
     <div className="font-gilroy-semibold">
       <Banner
-        title="Fresh2door Order Anytime, Anywhere!" 
-        css={{ color: 'white', fontSize: '20px', marginTop: '0px', backgroundColor: 'green',}}
+        // title="Fresh2door Order Anytime, Anywhere!" 
+        // css={{ color: 'white', fontSize: '20px', marginTop: '0px', backgroundColor: 'green',}}
       />
     <div className="p-3 md:p-6 mt-1 font-gilroy-semibold">
        <Carousel/>
