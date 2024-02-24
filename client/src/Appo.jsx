@@ -21,7 +21,7 @@ export default function Appo() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('http://localhost:5000/product');
+        const res = await fetch('https://fresh2door-2.onrender.com/product');
         const resData = await res.json();
         dispatch(setDataProduct(resData));
       } catch (error) {

@@ -36,7 +36,7 @@ export default function Login() {
     e.preventDefault();
     const { email, password } = data;
     if (email && password) {
-      const fetchData = await fetch('http://localhost:5000/login', {
+      const fetchData = await fetch('https://fresh2door-2.onrender.com/login', {
         method: 'POST',
         headers: {
           'content-type': 'application/json',

@@ -53,7 +53,7 @@ function Signup() {
     const {firstName, email, password, confirmPassword} = data;
     if (firstName && email && password && confirmPassword) {
       if(password === confirmPassword) {
-        const fetchData = await fetch('http://localhost:5000/signup', {
+        const fetchData = await fetch('https://fresh2door-2.onrender.com/signup', {
           method: "POST",
           headers: {
             "content-type" : "application/json" 

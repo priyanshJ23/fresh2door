@@ -48,7 +48,7 @@ function Header() {
       return [latitude, longitude]
     })
     let [lat, long] = latlong;
-    const response = await fetch("http://localhost:5000/getlocation", {
+    const response = await fetch("https://fresh2door-2.onrender.com/getlocation", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

@@ -31,7 +31,7 @@ function Newproduct() {
     const {name, image, category, price} = data
 
     if(name && image && category && price) {
-      const fetchData = await fetch('http://localhost:5000/uploadProduct', {
+      const fetchData = await fetch('https://fresh2door-2.onrender.com/uploadProduct', {
         method: "POST",
         headers : {
           "content-type" : "application/json"
