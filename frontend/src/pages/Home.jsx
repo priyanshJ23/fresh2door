@@ -40,8 +40,6 @@ function Home() {
     <div className= "bg-white">
     <div className="font-gilroy-semibold">
       <Banner
-        // title="Fresh2door Order Anytime, Anywhere!" 
-        // css={{ color: 'white', fontSize: '20px', marginTop: '0px', backgroundColor: 'green',}}
       />
     <div className="p-3 md:p-6 mt-1 font-gilroy-semibold">
        <Carousel/>
