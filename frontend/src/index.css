@@ -1,14 +1,3 @@
 @tailwind base;
 @tailwind components;
-@font-face {
-    font-family: "gilroy-bold";
-    src: local("GilroyBold"), url(../src/fonts/Gilroy-Bold.ttf) format('tff');
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: "gilroy-semibold";
-    src: local("GilroySemibold"), url(../src/fonts/Gilroy-SemiBold.ttf) format('tff');
-    font-weight: 600;
-}
 @tailwind utilities;

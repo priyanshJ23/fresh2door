@@ -15,7 +15,7 @@ import Testimonial from "../components/Testimonial";
 import data from '../components/data.json';
 import React from 'react';
 import Banner from "./Banner";
-
+import './hello.css'
 function Home() {
  
 
@@ -37,7 +37,7 @@ function Home() {
   }
 
   return (
-    <div className= "bg-white">
+    <div className= "bg-white" style={{ fontFamily: 'Arial, sans-serif' }}>
     <div className="font-gilroy-semibold">
       <Banner
       />
@@ -69,7 +69,7 @@ function Home() {
         </div>
       </div>
       <div class="w-3/4 mx-auto mt-8">
-  <h1 class="text-3xl mb-8">Banks Offers</h1>
+  <h2 className="font-bold text-2xl text-slate-800 mb-4">Bank Offers</h2>
   <div class="flex justify-between">
     <img class="transition" src={img10} alt="img10" style={{ width: '23%' }} />
     <img class="transition" src={img11} alt="img11" style={{ width: '23%' }} />
@@ -80,7 +80,7 @@ function Home() {
 
       <div className="">
         <div className="flex w-full items-center">  
-            <h2 className="font-bold text-2xl text-slate-800 mb-4">Vegetables</h2>
+            
           <div className="ml-auto flex gap-4">
             <button onClick={preveProduct} className="bg-slate-300 hover:bg-slate-400 text-lg p-1 rounded"><GrPrevious /></button>
             <button onClick={nextProduct} className="bg-slate-300 hover:bg-slate-400 text-lg p-1 rounded"><GrNext /></button>

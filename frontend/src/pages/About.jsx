@@ -36,7 +36,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div style={containerStyle} className="bg-white">
+    <div style={containerStyle} className="bg-white font-custom">
       <div style={cardStyle}>
         <h1 style={companyNameStyle}>
           <span style={{ color: 'green' }}>Fresh</span>

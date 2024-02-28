@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+    --font-family: 'Arial', sans-serif; /* Change this to your desired font family */
+  }
+  
+  .font-custom {
+    @apply font-sans; /* Use Tailwind's font-sans as a base */
+    font-family: var(--font-family); /* Apply the font family defined in CSS variable */
+  }
+  
