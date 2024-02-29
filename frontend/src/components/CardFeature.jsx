@@ -21,11 +21,7 @@ function CardFeature({image, name, price, category, loading, id}) {
         })
       );
     } else {
-      toast("Login first to add to cart");
-      setTimeout(() => {
-        navigate('/login');
-      }, 1000);
-      
+      toast("Login first to add to cart");      
     }
   };
 
