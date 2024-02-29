@@ -1,17 +1,10 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import CartProduct from '../components/cartProduct'
+import React from 'react';
 
-
-function Cart() {
-
-    const productCartItem = useSelector((state) => state.product.cartItem)
-    const totalPrice = productCartItem.reduce((acc,curr) => acc + parseInt(curr.total), 0);
-    const final = productCartItem.reduce((acc,curr) => acc + parseInt(curr.total), 0) + 100; 
+function OrderForm() {
   return (
     <div>
       <div className="flex flex-col items-center border-b bg-white py-4 sm:flex-row sm:px-10 lg:px-20 xl:px-32">
-        <a href="#" className="text-2xl font-bold text-gray-800">Fresh2door</a>
+        <a href="#" className="text-2xl font-bold text-gray-800">sneekpeeks</a>
         <div className="mt-4 py-2 text-xs sm:mt-0 sm:ml-auto sm:text-base">
           <div className="relative">
             <ul className="relative flex w-full items-center justify-between space-x-2 sm:space-x-4">
@@ -48,26 +41,27 @@ function Cart() {
           <p className="text-xl font-medium">Order Summary</p>
           <p className="text-gray-400">Check your items. And select a suitable shipping method.</p>
           {/* Items */}
-                          <div className="my-4 flex gap-3 flex-col md:flex-row">
-                            
-                                              {/* display cart items */}              
-                                                         <div className="w-full max-w-3xl">
-                           {productCartItem.map(el => {
-                                return (
-                                    <CartProduct
-                                        id={el._id}
-                                        key={el._id} image={el.image} 
-                                        name={el.name} 
-                                        category={el.category}
-                                        qty={el.qty}
-                                        total={el.total}
-                                        price={el.price}
-                                    />
-                                )
-                            })}
-                        </div> 
-                        </div>
-
+          <div className="mt-8 space-y-3 rounded-lg border bg-white px-2 py-4 sm:px-6">
+            {/* Item 1 */}
+            <div className="flex flex-col rounded-lg bg-white sm:flex-row">
+              <img className="m-2 h-24 w-28 rounded-md border object-cover object-center" src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+              <div className="flex w-full flex-col px-4 py-4">
+                <span className="font-semibold">Nike Air Max Pro 8888 - Super Light</span>
+                <span className="float-right text-gray-400">42EU - 8.5US</span>
+                <p className="text-lg font-bold">$138.99</p>
+              </div>
+            </div>
+            {/* Item 2 */}
+            <div className="flex flex-col rounded-lg bg-white sm:flex-row">
+              <img className="m-2 h-24 w-28 rounded-md border object-cover object-center" src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c25lYWtlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+              <div className="flex w-full flex-col px-4 py-4">
+                <span className="font-semibold">Nike Air Max Pro 8888 - Super Light</span>
+                <span className="float-right text-gray-400">42EU - 8.5US</span>
+                <p className="mt-auto text-lg font-bold">$238.99</p>
+              </div>
+            </div>
+          </div>
+          {/* Shipping Methods */}
           <p className="mt-8 text-lg font-medium">Shipping Methods</p>
           <form className="mt-5 grid gap-6">
             {/* Shipping Method 1 */}
@@ -154,16 +148,16 @@ function Cart() {
             <div className="mt-6 border-t border-b py-2">
               <div className="flex items-center justify-between">
                 <p className="text-sm font-medium text-gray-900">Subtotal</p>
-                <p className="font-semibold text-gray-900">₹{totalPrice}</p>
+                <p className="font-semibold text-gray-900">$399.00</p>
               </div>
               <div className="flex items-center justify-between">
                 <p className="text-sm font-medium text-gray-900">Shipping</p>
-                <p className="font-semibold text-gray-900">₹100.00</p>
+                <p className="font-semibold text-gray-900">$8.00</p>
               </div>
             </div>
             <div className="mt-6 flex items-center justify-between">
               <p className="text-sm font-medium text-gray-900">Total</p>
-              <p className="text-2xl font-semibold text-gray-900">₹{final}</p>
+              <p className="text-2xl font-semibold text-gray-900">$408.00</p>
             </div>
           </div>
           <button className="mt-4 mb-8 w-full rounded-md bg-gray-900 px-6 py-3 font-medium text-white">Place Order</button>
@@ -173,4 +167,4 @@ function Cart() {
   );
 }
 
-export default Cart;
+export default OrderForm;
