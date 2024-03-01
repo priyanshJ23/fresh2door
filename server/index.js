@@ -6,7 +6,7 @@ const axios  = require("axios")
 const app = express();
 
 const corsOptions = {
-    origin: "https://fresh2door-3.onrender.com/" // frontend URI (ReactJS)
+    origin: "https://fresh2door-3.onrender.com" // frontend URI (ReactJS)
 }
 app.use(express.json({limit: "10mb"}));
 app.use(cors(corsOptions));
