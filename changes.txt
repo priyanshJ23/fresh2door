@@ -1,3 +1,0 @@
-1) update modal in signup/login
-2) order placed feature
-3) Improving frontend ui
